@@ -280,12 +280,8 @@ fastPID stallPid = { // 1khz loop time
 };
 
 enum inputType {
-    AUTO_IN,
-    DSHOT_IN,
     SERVO_IN,
-    SERIAL_IN,
-    EDTARM,
-};
+    };
 
 char set_hysteris = 0;
 uint16_t prop_brake_duty_cycle = 0;
@@ -304,7 +300,7 @@ char comp_pwm = 1;
 char VARIABLE_PWM = 1;
 char bi_direction = 0;
 char stuck_rotor_protection = 1; // Turn off for Crawlers
-char brake_on_stop = 0;
+char brake_on_stop = 1;
 char stall_protection = 0;
 char use_sin_start = 0;
 char TLM_ON_INTERVAL = 0;
@@ -316,7 +312,7 @@ char motor_poles = 14;
 uint16_t CURRENT_LIMIT = 202;
 uint8_t sine_mode_power = 5;
 char drag_brake_strength = 10; // Drag Brake Power when brake on stop is enabled
-uint8_t driving_brake_strength = 10;
+uint8_t driving_brake_strength = 8;
 uint8_t dead_time_override = DEAD_TIME;
 char sine_mode_changeover_thottle_level = 5; // Sine Startup Range
 uint16_t stall_protect_target_interval = TARGET_STALL_PROTECTION_INTERVAL;
